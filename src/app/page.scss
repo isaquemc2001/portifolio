@@ -1,21 +1,69 @@
 .page-content {
     display: flex;
+    height: 100vh;
     flex-direction: column;
-    margin: 50px;
 
-    .person-name {
-        align-items: start;
-        font-size: 75px;
+    .left-content {
+        display: flex;
+        flex-direction: column;
+
+        .person-name {
+            align-items: start;
+            font-size: 75px;
+        }
     }
 
-    .cargo{
+    .cargo {
         align-items: start;
         font-size: 36px;
     }
 
-    span{
+    span {
         font-size: 24px;
         font-weight: 500;
     }
 
+}
+
+@media(min-width: 1280px) {
+    .page-content {
+        display: flex;
+        height: 100vh;
+        overflow-y: none;
+        padding: 70px;
+        padding-top: 100px;
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            width: 33.3%;
+        }
+
+        .center-content {
+            display: flex;
+            width: 33.3%;
+        }
+
+        .right-content {
+            display: flex;
+            flex-direction: column;
+            width: 33.3;
+        }
+
+        .person-name {
+            align-items: start;
+            font-size: 75px;
+        }
+
+        .cargo {
+            align-items: start;
+            font-size: 36px;
+        }
+
+        span {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+    }
 }
