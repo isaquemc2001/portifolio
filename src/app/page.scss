@@ -1,71 +1,120 @@
-// Desenvolver com grid
-
-.page-content {
+.left-content {
+    grid-area: perfil;
     display: flex;
-    height: 100vh;
     flex-direction: column;
+    padding: 15px;
 
-    .left-content {
+    :first-child {
+        font-size: 54px;
+        font-weight: 100;
+    }
+    
+    :last-child {
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 100;
+    }
+}
+
+.left-content2 {
+    grid-area: experience;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    :last-child{
+        :first-child{
+            width: 45px;
+            margin-right: 15px;
+        }
+        :last-child{
+            width: 50px;
+        }
+    }
+}
+
+.center-content {
+    grid-area: foto;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+    :first-child{
+        border-radius: 50%;
+        width: 289px;
+        height: 275px;
+    }
+}
+
+.right-content {
+    grid-area: otherinfos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    :first-of-type{
         display: flex;
         flex-direction: column;
 
-        .person-name {
-            align-items: start;
-            font-size: 37.5px;
+        .eua{
+            width: 50px
+        }
+
+        .brasil{
+            width: 38px;
+            height: 38px;
         }
     }
+}
 
-    .cargo {
-        align-items: start;
-        font-size: 18px;
+.page-content {
+    display: grid;
+    grid-template-areas:
+        'perfil'
+        'foto'
+        'experience'
+        'otherinfos';
+
+    padding: 10px;
+
+    span{
+        font-weight: 600;
+        margin-top: 25px;
+        margin-bottom: 10px;
     }
 
-    span {
-        font-size: 24px;
-        font-weight: 500;
+    p{
+        display: flex;
+        text-align: center;
     }
-
 }
 
 @media(min-width: 1280px) {
+    .left-content {
+        grid-area: perfil;
+    }
+
+    .left-content2 {
+        grid-area: experience;
+    }
+
+    .center-content {
+        grid-area: foto;
+    }
+
+    .right-content {
+        grid-area: otherinfos;
+    }
+
     .page-content {
-        display: flex;
-        height: 100vh;
-        overflow-y: none;
-        padding: 70px;
-        padding-top: 100px;
+        display: grid;
+        grid-template-areas:
+            'perfil foto otherinfos'
+            'experience foto otherinfos'
+            'experience foto otherinfos';
 
-        .left-content {
-            display: flex;
-            flex-direction: column;
-            width: 33.3%;
-        }
+        padding: 10px;
 
-        .center-content {
-            display: flex;
-            width: 33.3%;
-        }
-
-        .right-content {
-            display: flex;
-            flex-direction: column;
-            width: 33.3;
-        }
-
-        .person-name {
-            align-items: start;
-            font-size: 75px;
-        }
-
-        .cargo {
-            align-items: start;
-            font-size: 36px;
-        }
-
-        span {
-            font-size: 24px;
-            font-weight: 500;
-        }
 
     }
 }

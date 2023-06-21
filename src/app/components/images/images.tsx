@@ -1,6 +1,7 @@
 interface PropsImagem {
 nome: string
-size: number
+size?: number
+classname?: string
 }
 
 import Linkedin from '../../assets/linkedin.svg'
@@ -36,7 +37,7 @@ export default function Imagem(props: PropsImagem){
     console.log(changeImage)
     return(
         <>
-            <img src={changeImage(props)} width={props.size}/>
+            <img className={props.classname} src={changeImage(props)} width={props.size}/>
         </>
     )
 }
