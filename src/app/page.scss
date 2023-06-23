@@ -4,6 +4,11 @@
     flex-direction: column;
     padding: 15px;
 
+    span{
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+
     :first-child {
         font-size: 54px;
         font-weight: 100;
@@ -52,18 +57,39 @@
     flex-direction: column;
     align-items: center;
     
+    
     :first-of-type{
+        align-items: center;
+        :first-child{
+            display: flex;
+            gap: 10px;
+            .eua{
+                width: 50px;
+            }
+        }
+
+        :last-child{
+            display: flex;
+            gap: 10px;
+            .brasil{
+                width: 38px;
+                height: 38px;
+            }
+        }
+    }
+
+    .social{
+        padding-top: 25px;
+    }
+
+    >:last-child{
         display: flex;
-        flex-direction: column;
-
-        .eua{
-            width: 50px
-        }
-
-        .brasil{
-            width: 38px;
-            height: 38px;
-        }
+        justify-content: center;
+        border-radius: 25px;
+        border: none;
+        width: 156px;
+        height: 45px;
+        margin-bottom: 50px;
     }
 }
 

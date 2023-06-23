@@ -43,12 +43,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
-          <Images nome={'Linkedin'} size={60}></Images>
-          <Images nome={'Github'} size={60}></Images>
+        <div className='social'>
+          <Images nome={'Linkedin'} size={50}></Images>
+          <Images nome={'Github'} size={50}></Images>
         </div>
 
-        <button className='contact-me'><a href='mailto:isaquehmc@outlook.com'><img src="./assets/email.svg" width='25' />CONTACT ME</a></button>
+        <button className='contact-me'><a href='mailto:isaquehmc@outlook.com'>CONTACT ME<Images nome={'Email'}></Images></a></button>
       </div>
 
 
