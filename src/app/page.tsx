@@ -43,6 +43,7 @@ export default function Home() {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div>
           <a href="#" target='_blank'>
             <Images nome={'Linkedin'} size={60}></Images>
@@ -58,6 +59,14 @@ export default function Home() {
             CONTACT ME
           </button>
         </a>
+=======
+        <div className='social'>
+          <Images nome={'Linkedin'} size={50}></Images>
+          <Images nome={'Github'} size={50}></Images>
+        </div>
+
+        <button className='contact-me'><a href='mailto:isaquehmc@outlook.com'>CONTACT ME<Images nome={'Email'}></Images></a></button>
+>>>>>>> 423b229cb8bb9b830a331aca7fe743f26f066b26
       </div>
 
 
