@@ -32,23 +32,32 @@ export default function Home() {
       <div className="right-content">
         <span>Languages</span>
         <div>
-          <div>
+          <div className='languages'>
             <Images classname={'eua'} nome={'Eua'}></Images>
             <p>EN Tech Level</p>
           </div>
 
-          <div>
+          <div className='languages'>
             <Images classname={'brasil'} nome={'Brasil'}></Images>
             <p>PT-BR Native Speaker</p>
           </div>
         </div>
 
         <div>
-          <Images nome={'Linkedin'} size={60}></Images>
-          <Images nome={'Github'} size={60}></Images>
+          <a href="#" target='_blank'>
+            <Images nome={'Linkedin'} size={60}></Images>
+          </a>
+          <a href="#" target='_blank'>
+            <Images nome={'Github'} size={60}></Images>
+          </a>
         </div>
 
-        <button className='contact-me'><a href='mailto:isaquehmc@outlook.com'><img src="./assets/email.svg" width='25' />CONTACT ME</a></button>
+        <a href='mailto:isaquehmc@outlook.com'>
+          <button>
+            <Images nome={'Mail'} size={25}></Images>
+            CONTACT ME
+          </button>
+        </a>
       </div>
 
 

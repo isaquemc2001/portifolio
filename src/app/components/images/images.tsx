@@ -12,6 +12,7 @@ import Github from '../../assets/github.svg'
 import Me from '../../assets/imagem-portifolio.png'
 import Laravel from '../../assets/laravel.png'
 import React from '../../assets/react.png'
+import Mail from '../../assets/email.svg'
 
 function changeImage(props: PropsImagem){
     if(props.nome == "Linkedin"){
@@ -30,6 +31,8 @@ function changeImage(props: PropsImagem){
         return Laravel.src
     }else if(props.nome == "React"){
         return React.src
+    }else if(props.nome == "Mail"){
+        return Mail.src
     }
 }
 
